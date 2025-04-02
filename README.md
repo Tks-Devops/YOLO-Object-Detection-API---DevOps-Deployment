@@ -15,7 +15,7 @@ This project automates the deployment of a YOLO Object Detection API using Helm,
 1. Clone the Repository
 
     ```sh
-    git clone https://github.com/yourusername/yolo-devops.git
+    https://github.com/Tks-Devops/YOLO-Object-Detection-API---DevOps-Deployment.git
     cd yolo-devops
     ```
 
