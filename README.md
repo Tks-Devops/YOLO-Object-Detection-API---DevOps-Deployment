@@ -1,82 +1,96 @@
 # YOLO-Object-Detection-API---DevOps-Deployment
-This project automates the deployment of a YOLO Object Detection API using Helm, Kubernetes, and implements logging and monitoring with the ELK stack (Elasticsearch, Logstash, Kibana) and Prometheus &amp; Grafana.
+This project automates the deployment of a YOLO Object Detection API using Helm, Kubernetes, and implements logging and monitoring with the ELK stack (Elasticsearch, Logstash, Kibana) and Prometheus & Grafana.
 
-Prerequisites
+## Prerequisites
 
-Minikube or Kubernetes Cluster
+- Minikube or Kubernetes Cluster
+- Helm Installed
+- Docker Installed
+- kubectl Installed
 
-Helm Installed
-
-Docker Installed
-
-kubectl Installed
-Setup Steps
+## Setup Steps
 
 1. Clone the Repository
 
-git clone https://github.com/yourusername/yolo-devops.git
-cd yolo-devops
-Setup Steps
-
-1. Clone the Repository
-
-git clone https://github.com/yourusername/yolo-devops.git
-cd yolo-devops
+    ```sh
+    git clone https://github.com/yourusername/yolo-devops.git
+    cd yolo-devops
+    ```
 
 2. Start Minikube (Optional, if using Minikube)
-minikube start --memory=6g --cpus=2 --disk-size=20g
+
+    ```sh
+    minikube start --memory=6g --cpus=2 --disk-size=20g
+    ```
 
 3. Deploy ELK Stack
-kubectl apply -f logging/elasticsearch/
-kubectl apply -f logging/logstash/
-kubectl apply -f logging/kibana/
+
+    ```sh
+    kubectl apply -f logging/elasticsearch/
+    kubectl apply -f logging/logstash/
+    kubectl apply -f logging/kibana/
+    ```
 
 4. Deploy Monitoring Stack (Prometheus & Grafana)
-kubectl apply -f monitoring/prometheus/
-kubectl apply -f monitoring/grafana/
+
+    ```sh
+    kubectl apply -f monitoring/prometheus/
+    kubectl apply -f monitoring/grafana/
+    ```
 
 5. Deploy YOLO API with Helm
-helm install yolo-api ./yolo-api-chart/
+
+    ```sh
+    helm install yolo-api ./yolo-api-chart/
+    ```
 
 6. Verify Deployments
-kubectl get pods
-kubectl get svc
 
-Access Services
+    ```sh
+    kubectl get pods
+    kubectl get svc
+    ```
 
-YOLO API: http://<minikube-ip>:32132
+## Access Services
 
-Kibana (ELK UI): http://<minikube-ip>:5601
+- YOLO API: `http://<minikube-ip>:32132`
+- Kibana (ELK UI): `http://<minikube-ip>:5601`
+- Grafana Dashboard: `http://<minikube-ip>:3000`
+- Prometheus UI: `http://<minikube-ip>:9090`
 
-Grafana Dashboard: http://<minikube-ip>:3000
+## Screenshots
 
-Prometheus UI: http://<minikube-ip>:9090
+## Troubleshooting Guide
 
- Screenshots
+### Elasticsearch Fails to Start:
 
-
-
-
-Troubleshooting Guide
-
-Elasticsearch Fails to Start:
-
+```sh
 kubectl logs -f pod/elasticsearch-xxxxx
-Ensure memory and disk space are sufficient.
 
+
+Ensure memory and disk space are sufficient.
 Grafana Not Loading:
+sh
 
 kubectl get pods -n monitoring
 
 Restart Grafana pod if needed.
-
 Submission Instructions
 
 Ensure all components are running correctly.
 
 Push the final code and documentation to GitHub:
+sh
 
 git add .
 git commit -m "Final submission"
 git push origin main
+
+Code
+
+
+You can now update your `README.md` file with this content.
+
+
+
 
