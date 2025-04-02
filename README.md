@@ -93,7 +93,6 @@ git push origin main
 Code
 
 
-You can now update your `README.md` file with this content.
 
 
 
