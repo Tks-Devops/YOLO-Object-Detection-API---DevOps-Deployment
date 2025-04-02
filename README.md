@@ -1,3 +1,4 @@
+![Uploading image.png…]()
 # YOLO-Object-Detection-API---DevOps-Deployment
 This project automates the deployment of a YOLO Object Detection API using Helm, Kubernetes, and implements logging and monitoring with the ELK stack (Elasticsearch, Logstash, Kibana) and Prometheus & Grafana.
 
@@ -60,7 +61,7 @@ This project automates the deployment of a YOLO Object Detection API using Helm,
 
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/aa313568-59e2-4813-a9f1-a23ca08824c8)
-![Uploading image.png…]()
+
 
 ## Troubleshooting Guide
 
